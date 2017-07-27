@@ -1,0 +1,44 @@
+4c4
+< // Dao.Casino Crowdsale Token Contract (Under Consideration)
+---
+> // Dao.Casino Crowdsale Token Contract
+6,7c6,7
+< // Enjoy. (c) BokkyPooBah / Bok Consulting Pty Ltd 2017
+< // The MIT Licence (Under Consideration).
+---
+> // Enjoy. (c) BokkyPooBah / Bok Consulting Pty Ltd for Dao.Casino 2017
+> // The MIT Licence.
+182a183,184
+>     // > new Date("2017-06-29T13:00:00").getTime()/1000
+>     // 1498741200
+184,185c186,187
+<     uint256 public STARTDATE;
+<     uint256 public ENDDATE;
+---
+>     uint256 public constant STARTDATE = 1498741200;
+>     uint256 public constant ENDDATE = STARTDATE + 28 days;
+188c190
+<     uint256 public CAP;
+---
+>     uint256 public constant CAP = 84417 ether;
+192c194
+<     address public multisig;
+---
+>     address public multisig = 0xa22AB8A9D641CE77e06D98b7D7065d324D3d6976;
+194,199c196
+<     function DaoCasinoToken(uint256 _start, uint256 _end, uint256 _cap, address _multisig) {
+<         STARTDATE = _start;
+<         ENDDATE   = _end;
+<         CAP       = _cap;
+<         multisig  = _multisig;
+<     }
+---
+>     uint256 public totalEthers;
+201,202c198,199
+<     // > new Date("2017-06-29T13:00:00").getTime()/1000
+<     // 1498741200
+---
+>     function DaoCasinoToken() {
+>     }
+204d200
+<     uint256 public totalEthers;
